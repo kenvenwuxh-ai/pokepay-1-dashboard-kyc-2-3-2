@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokePay Admin Backend</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="主导航">
+        <div class="brand">
+          <div class="brand-mark">P</div>
+          <div>
+            <strong>PokePay</strong>
+            <span>Admin Backend</span>
+          </div>
+        </div>
+
+        <label class="nav-search">
+          <span>搜索模块</span>
+          <input id="navSearch" type="search" placeholder="KYC、提现、API..." />
+        </label>
+
+        <nav id="navList" class="nav-list"></nav>
+      </aside>
+
+      <div class="workspace">
+        <header class="topbar">
+          <button id="menuToggle" class="icon-button only-mobile" type="button" aria-label="切换菜单">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div>
+            <p class="eyebrow">全球卡发行与数字资产运营后台</p>
+            <h1 id="pageTitle">工作台 Dashboard</h1>
+          </div>
+          <div class="topbar-actions">
+            <label class="global-search">
+              <span>全局搜索</span>
+              <input id="globalSearch" type="search" placeholder="用户 UID / 卡号后四位 / 订单号" />
+            </label>
+          </div>
+        </header>
+
+        <main id="app" class="content" tabindex="-1"></main>
+      </div>
+    </div>
+
+    <section id="detailDrawer" class="drawer" aria-live="polite" aria-hidden="true">
+      <div class="drawer-panel">
+        <header>
+          <div>
+            <p class="eyebrow">详情</p>
+            <h2 id="drawerTitle">记录详情</h2>
+          </div>
+          <button id="closeDrawer" class="icon-close" type="button" aria-label="关闭详情">×</button>
+        </header>
+        <div id="drawerBody" class="drawer-body"></div>
+      </div>
+    </section>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
